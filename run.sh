@@ -1,1 +1,1 @@
-clear && xmake project -k compile_commands && xmake b && xmake r
+clear && xmake project -k compile_commands && xmake b && xmake r --workdir=.

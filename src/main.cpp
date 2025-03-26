@@ -2,9 +2,9 @@
 #include <dpp/dpp.h>
 #include "commands.hpp"
 #include "events.hpp"
+#include "globals.hpp"
 
-const std::string &BOT_TOKEN = "";
-const dpp::snowflake &GUILD_ID = 948709223808778290;
+const std::string BOT_TOKEN = dotenv.get("BOT_TOKEN");
 
 void createGuildCommand(std::string name, std::string description, dpp::cluster &bot, dpp::snowflake guild_id)
 {
@@ -27,8 +27,6 @@ int main()
 
     bot.on_ready([&bot](const dpp::ready_t &event)
                  { heavensbot::events::on_ready(bot, event); });
-
-    createGuildCommand("ping", "Ping pong!", bot, GUILD_ID);
 
     bot.start(dpp::st_wait);
 }

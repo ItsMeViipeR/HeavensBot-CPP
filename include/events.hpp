@@ -3,6 +3,7 @@
 
 #include <dpp/dpp.h>
 #include "commands.hpp"
+#include "globals.hpp"
 
 namespace heavensbot::events
 {

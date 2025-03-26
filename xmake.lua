@@ -7,6 +7,6 @@ target("test_xmake")
     add_includedirs("include")
     add_files("src/*.cpp")
     add_headerfiles("include/*.hpp")
-    add_languages("c++17")
+    add_languages("c++20")
 
     add_packages("dpp")
